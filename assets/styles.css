@@ -120,7 +120,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .featured-strip img{height:30px;opacity:.42;flex-shrink:0;filter:brightness(0) invert(1)}
 
 /* ── FREEBASIC (exact copy) ── */
-.freebasic-section{position:relative;background:var(--c-lightbg);padding:120px 0;overflow:hidden}
+.freebasic-section{position:relative;background:#CBE4F4;padding:120px 0;overflow:hidden}
 .freebasic-section::before{content:"";position:absolute;left:0;top:0;bottom:0;width:50%;background:#1d1d1f;z-index:0}
 .fb-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
 .fb-inner .bonus-left{display:flex;flex-direction:column;grid-column:2}

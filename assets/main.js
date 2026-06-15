@@ -1,0 +1,6 @@
+var CHECKOUT_URL="#checkout";
+function startTrial(){window.location.href=CHECKOUT_URL}
+function toggleQa(btn){var qa=btn.closest('.qa');var open=qa.classList.contains('open');document.querySelectorAll('.qa.open').forEach(function(o){o.classList.remove('open');o.querySelector('.qa-a').style.maxHeight=null});if(!open){qa.classList.add('open');var a=qa.querySelector('.qa-a');a.style.maxHeight=a.scrollHeight+'px'}}
+(function(){var nav=document.getElementById('nav');function on(){nav.classList.toggle('scrolled',window.scrollY>60)}on();window.addEventListener('scroll',on,{passive:true})})();
+(function(){var els=document.querySelectorAll('.appear');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('is-visible')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
+(function(){var sec=document.getElementById('niche'),orb=document.getElementById('glowOrb');if(!sec||!orb)return;sec.addEventListener('pointermove',function(e){var r=sec.getBoundingClientRect();orb.style.left=(e.clientX-r.left)+'px';orb.style.top=(e.clientY-r.top)+'px';orb.style.opacity='1'});sec.addEventListener('pointerleave',function(){orb.style.opacity='0'})})();

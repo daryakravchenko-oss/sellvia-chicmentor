@@ -103,17 +103,16 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .hp-proof{margin-top:10px;font-size:14px;color:var(--hp-muted)}
 .hp-proof b{color:#fff;font-weight:700}
 .hp-proof sup{color:var(--hp-muted)}
-/* stat-bar */
-.stat-bar{position:relative;z-index:2;background:rgba(20,18,22,.6);border-top:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px)}
-.stat-bar-inner{max-width:var(--max-wide);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08)}
-.stat-item{background:#0e0c10;padding:30px 24px;text-align:center}
-.stat-n{font-size:clamp(30px,4vw,48px);font-weight:700;letter-spacing:-.03em;color:var(--c-amber);line-height:1;display:block}
-.stat-l{font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;display:block}
+/* stat-bar (ratings-sec, igtt-style: transparent, white numbers, divider rules) */
+.stat-bar{margin:0 auto 48px}
+.stat-bar-inner{max-width:var(--max-wide);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);padding:0 28px}
+.stat-item{padding:14px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+.stat-item:last-child{border-right:none}
+.stat-n{font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1;display:block}
+.stat-l{font-size:14px;color:rgba(255,255,255,.6);margin-top:8px;display:block;text-wrap:balance}
 
 /* ── TRUST / RATINGS (dark marquee) ── */
 .ratings-sec{background:var(--c-near);padding:120px 0}
-.ratings-head{text-align:center;font-size:23px;font-weight:400;line-height:1.15;color:rgba(255,255,255,.7);max-width:var(--max-wide);margin:0 auto 46px;padding:0 28px}
-.ratings-head .ratings-num{color:#fff;font-weight:700;font-size:46px}
 .featured-marquee{display:flex;align-items:center;gap:36px;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
 .featured-label{flex-shrink:0;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.4);white-space:nowrap}
 .featured-viewport{flex:1;min-width:0;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
@@ -287,6 +286,8 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .hp-shell{padding:48px 20px}
   .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec,.ratings-sec{padding:72px 0}
   .stat-bar-inner{grid-template-columns:1fr}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);padding:18px 24px}
+  .stat-item:last-child{border-bottom:none}
   .get-list{grid-template-columns:1fr}
   .bundle-grid{grid-template-columns:1fr}
   .bcard,.bcard.tall{grid-column:auto;aspect-ratio:16/10}

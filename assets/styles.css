@@ -111,14 +111,13 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .stat-l{font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;display:block}
 
 /* ── TRUST / RATINGS (dark marquee) ── */
-.ratings-sec{background:var(--c-near);padding:96px 0}
-.featured-marquee{display:flex;align-items:center;gap:36px;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
-.featured-label{flex-shrink:0;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.4);white-space:nowrap}
-.featured-viewport{flex:1;min-width:0;overflow:hidden;-webkit-mask:linear-gradient(90deg,#000 0,#000 86%,transparent);mask:linear-gradient(90deg,#000 0,#000 86%,transparent)}
-.featured-strip{display:flex;align-items:center;gap:70px;width:max-content;animation:featuredScroll 24s linear infinite}
-.featured-strip img{height:30px;opacity:.42;flex-shrink:0;filter:brightness(0) invert(1)}
-.ratings-foot{text-align:center;margin-top:40px;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.ratings-foot b{color:rgba(255,255,255,.4);font-weight:700}
+.ratings-sec{background:var(--c-near);padding:56px 0}
+.ratings-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px 60px;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
+.ratings-logos{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:56px}
+.ratings-logos img{height:30px;opacity:.5;filter:brightness(0) invert(1)}
+.ratings-stat{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.ratings-num{font-size:40px;line-height:1;font-weight:700;color:#fff;letter-spacing:-.02em}
+.ratings-cap{margin-top:7px;font-size:14px;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.55)}
 
 /* ── FREEBASIC (exact copy) ── */
 .freebasic-section{background:var(--c-lightbg);padding:120px 0;overflow:hidden}
@@ -261,7 +260,6 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 /* keyframes */
 @keyframes hpHeadlineShine{0%{background-position:100% 50%}50%{background-position:0% 50%}100%{background-position:0% 50%}}
 @keyframes pillShine{0%{left:-100%}100%{left:150%}}
-@keyframes featuredScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── RESPONSIVE ── */
@@ -275,7 +273,8 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 @media(max-width:600px){
   .sec-in,.fb-inner,.sienna-inner{padding-left:20px;padding-right:20px}
   .hp-shell{padding:48px 20px}
-  .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec,.ratings-sec{padding:72px 0}
+  .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec{padding:72px 0}
+  .ratings-sec{padding:40px 0}
   .stat-bar-inner{grid-template-columns:1fr}
   .get-list{grid-template-columns:1fr}
   .bundle-grid{grid-template-columns:1fr}

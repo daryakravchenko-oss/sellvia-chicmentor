@@ -111,7 +111,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .stat-l{font-size:14px;color:rgba(255,255,255,.55);margin-top:8px;display:block}
 
 /* ── TRUST / RATINGS (dark marquee) ── */
-.ratings-sec{background:var(--c-near);padding:56px 0}
+.ratings-sec{background:var(--c-near);padding:120px 0}
 .ratings-head{text-align:center;font-size:23px;font-weight:400;line-height:1.15;color:rgba(255,255,255,.7);max-width:var(--max-wide);margin:0 auto 46px;padding:0 28px}
 .ratings-head .ratings-num{color:#fff;font-weight:700;font-size:46px}
 .featured-marquee{display:flex;align-items:center;gap:36px;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
@@ -121,8 +121,13 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .featured-strip img{height:30px;opacity:.42;flex-shrink:0;filter:brightness(0) invert(1)}
 
 /* ── FREEBASIC (exact copy) ── */
-.freebasic-section{background:var(--c-lightbg);padding:120px 0;overflow:hidden}
-.fb-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;max-width:1140px;margin:0 auto;padding:0 28px}
+.freebasic-section{position:relative;background:var(--c-lightbg);padding:120px 0;overflow:hidden}
+.freebasic-section::before{content:"";position:absolute;right:0;top:0;bottom:0;width:50%;background:#1d1d1f;z-index:0}
+.fb-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
+.fb-inner .bonus-left{display:flex;flex-direction:column}
+.freebasic-section .bonus-heading{max-width:none;text-wrap:balance}
+.freebasic-section .bullets{border-top:0;margin-bottom:30px}
+.freebasic-section .bullet-item{border-bottom:0;padding:10px 0}
 .bonus-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--c-near);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:24px;width:fit-content;position:relative;overflow:hidden;isolation:isolate}
 .bonus-pill::after{content:'';position:absolute;top:0;left:-100%;width:80%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:pillShine 4s var(--ease) infinite;z-index:-1}
 .bonus-heading{font-size:clamp(30px,4vw,46px);font-weight:700;color:var(--c-near);letter-spacing:-.025em;line-height:1.08;margin-bottom:18px;max-width:22ch}
@@ -133,17 +138,14 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .bullet-item:hover{padding-left:6px}
 .bullet-text{font-size:15.5px;color:var(--c-near);line-height:1.45}
 .bullet-text b{font-weight:600}
-/* copy-card (right visual) */
-.copy-card{background:linear-gradient(155deg,#1d1d1f,#111114);border-radius:24px;padding:40px 34px;color:#fff;text-align:center;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.18),0 8px 24px rgba(0,0,0,.08)}
-.copy-card::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:220px;background:radial-gradient(ellipse,rgba(245,166,35,.4),transparent 65%);pointer-events:none}
-.copy-badge{position:relative;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#1d1d1f;background:var(--c-amber);padding:6px 14px;border-radius:100px;margin-bottom:20px}
-.copy-big{position:relative;font-weight:700;font-size:54px;letter-spacing:-.03em;line-height:1}
-.copy-big span{font-size:24px;vertical-align:super;color:var(--c-amber)}
-.copy-big-sub{position:relative;font-size:14px;color:rgba(255,255,255,.6);margin-top:6px}
-.copy-row{position:relative;display:flex;justify-content:center;gap:30px;margin:24px 0 26px;padding:20px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
-.copy-row .cr-val{font-weight:700;font-size:20px}
-.copy-row .cr-lbl{font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px}
-.copy-card .fine{position:relative;font-size:12px;color:rgba(255,255,255,.5);margin-top:13px}
+/* split art (right visual): photo + floating card over the dark half */
+.fb-art-stage{position:absolute;right:0;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;z-index:2;padding:24px 80px;pointer-events:none}
+.fb-art-stack{position:relative;width:100%;max-width:372px;aspect-ratio:6/7}
+.fb-art-stack::before{content:"";position:absolute;left:-20%;top:-12%;width:140%;height:124%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(245,166,35,.42),rgba(245,166,35,.18) 42%,transparent 70%);filter:blur(46px);pointer-events:none}
+.fb-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.4),0 8px 24px -8px rgba(0,0,0,.25)}
+.fb-card{position:absolute;display:block;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.28));pointer-events:none;z-index:2}
+.fb-card-1{left:-16%;top:58%;width:58%;border-radius:16px;animation:fbFloat 5s ease-in-out infinite}
+@keyframes fbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
 /* ── GET-SEC (niche) ── */
 .get-sec{background:var(--cream);position:relative;overflow:hidden;padding:120px 0}
@@ -267,6 +269,10 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 /* ── RESPONSIVE ── */
 @media(max-width:980px){
   .fb-inner,.sienna-inner{grid-template-columns:1fr;gap:40px}
+  .freebasic-section::before{display:none}
+  .fb-art-stage{position:static;width:100%;padding:0;margin:44px auto 0}
+  .fb-art-stack{max-width:330px;margin:0 auto}
+  .fb-card-1{left:-8%;width:52%}
   .get-list{grid-template-columns:repeat(2,1fr)}
   .bundle-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .bcard.tall{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
@@ -275,8 +281,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 @media(max-width:600px){
   .sec-in,.fb-inner,.sienna-inner{padding-left:20px;padding-right:20px}
   .hp-shell{padding:48px 20px}
-  .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec{padding:72px 0}
-  .ratings-sec{padding:40px 0}
+  .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec,.ratings-sec{padding:72px 0}
   .stat-bar-inner{grid-template-columns:1fr}
   .get-list{grid-template-columns:1fr}
   .bundle-grid{grid-template-columns:1fr}

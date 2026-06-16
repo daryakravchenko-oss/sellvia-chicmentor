@@ -141,12 +141,10 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .bullet-text{font-size:15.5px;color:var(--c-near);line-height:1.45}
 .bullet-text b{font-weight:600}
 /* split art (right visual): photo + floating card over the dark half */
-.fb-art-stage{position:absolute;left:0;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;z-index:2;padding:24px 80px;pointer-events:none}
-.fb-art-stack{position:relative;width:100%;max-width:372px;aspect-ratio:6/7}
-.fb-art-stack::before{content:"";position:absolute;left:-20%;top:-12%;width:140%;height:124%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(245,166,35,.42),rgba(245,166,35,.18) 42%,transparent 70%);filter:blur(46px);pointer-events:none}
-.fb-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.4),0 8px 24px -8px rgba(0,0,0,.25)}
+.fb-art-stage{position:absolute;left:0;top:0;bottom:0;width:50%;z-index:2;pointer-events:none;overflow:hidden}
+.fb-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .fb-card{position:absolute;display:block;height:auto;filter:drop-shadow(0 18px 40px rgba(0,0,0,.28));pointer-events:none;z-index:2}
-.fb-card-1{right:-8%;top:60%;width:52%;border-radius:16px;animation:fbFloat 5s ease-in-out infinite}
+.fb-card-1{right:7%;bottom:9%;width:34%;border-radius:16px;animation:fbFloat 5s ease-in-out infinite}
 @keyframes fbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
 /* ── GET-SEC (niche) ── */
@@ -273,9 +271,8 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .fb-inner,.sienna-inner{grid-template-columns:1fr;gap:40px}
   .freebasic-section::before{display:none}
   .fb-inner .bonus-left{grid-column:auto}
-  .fb-art-stage{position:static;width:100%;padding:0;margin:44px auto 0}
-  .fb-art-stack{max-width:330px;margin:0 auto}
-  .fb-card-1{right:-4%;width:50%}
+  .fb-art-stage{position:relative;width:100%;margin:44px auto 0;aspect-ratio:16/11;border-radius:18px}
+  .fb-card-1{right:5%;bottom:7%;width:30%}
   .get-list{grid-template-columns:repeat(2,1fr)}
   .bundle-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .bcard.tall{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}

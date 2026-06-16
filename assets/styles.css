@@ -230,24 +230,31 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .sienna-sec{background:#0e0c10;color:#fff;padding:120px 0;position:relative;overflow:hidden}
 .sienna-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1140px;margin:0 auto;padding:0 28px}
 .sienna-left{display:flex;flex-direction:column}
-.sienna-left .bonus-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
 .sienna-left .bonus-heading{color:#fff}
 .sienna-left .bonus-sub{color:rgba(255,255,255,.62)}
 .sienna-left .bullets{border-top:none;margin-bottom:30px}
-.sienna-left .bullet-item{border-bottom-color:rgba(255,255,255,.12)}
-.sienna-left .bullet-item:first-child{border-top:1px solid rgba(255,255,255,.12)}
-.sienna-left .bullet-text{color:rgba(255,255,255,.85)}
-.sienna-left .bullet-item svg{color:var(--c-amber)}
-.sienna-card{background:linear-gradient(155deg,#1d1d1f,#15131a);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:34px;color:#fff;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.2)}
-.sienna-card::before{content:'';position:absolute;top:-60px;right:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(245,166,35,.35),transparent 65%)}
-.sienna-tag{position:relative;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:100px;margin-bottom:20px}
+.sienna-left .bullet-item{align-items:flex-start;gap:12px;padding:8px 0;border:0}
+.sienna-left .bullet-check{flex-shrink:0;width:22px;height:22px;color:var(--c-amber);margin-top:2px}
+.sienna-left .bullet-text{font-size:15px;color:rgba(255,255,255,.85)}
+.sienna-card{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;color:#fff;box-shadow:0 32px 80px rgba(0,0,0,.35)}
+.sienna-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(120% 70% at 72% 8%,rgba(245,166,35,.42),transparent 55%),linear-gradient(160deg,#2c2630,#15131a);background-size:cover;background-position:center}
+.sienna-scrim{position:absolute;left:0;right:0;bottom:0;height:62%;z-index:1;background:linear-gradient(to top,rgba(10,9,12,.97) 12%,rgba(10,9,12,.72) 46%,transparent 100%)}
+.sienna-tag{position:absolute;top:18px;left:18px;z-index:2;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;background:rgba(0,0,0,.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:100px}
 .sienna-tag .dot{width:7px;height:7px;border-radius:50%;background:#ff5a5a}
-.sienna-name{position:relative;font-weight:700;font-size:27px;margin-bottom:6px;letter-spacing:-.02em}
-.sienna-role{position:relative;font-size:14px;color:rgba(255,255,255,.62);margin-bottom:22px}
-.sienna-quote{position:relative;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.4;color:#fff}
-.sienna-meta{position:relative;display:flex;gap:24px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
-.sienna-meta .m-val{font-weight:700;font-size:21px;color:var(--c-amber)}
-.sienna-meta .m-lbl{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
+.sienna-overlay{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 26px 28px}
+.sienna-name{font-weight:700;font-size:23px;letter-spacing:-.02em;margin-bottom:4px}
+.sienna-role{font-size:13px;color:rgba(255,255,255,.66);margin-bottom:14px}
+.sienna-quote{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.38;color:#fff;margin-bottom:18px}
+.sienna-stats{position:relative;height:54px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16)}
+.sienna-stat{position:absolute;left:0;top:18px;opacity:0}
+.sienna-stat:first-child{opacity:1}
+.sienna-stat .m-val{font-weight:700;font-size:21px;color:var(--c-amber);line-height:1}
+.sienna-stat .m-lbl{font-size:12px;color:rgba(255,255,255,.66);margin-top:4px}
+.sienna-card.is-visible .sienna-stat{animation:siennaStat 9s var(--ease) infinite}
+.sienna-card.is-visible .sienna-stat:nth-child(2){animation-delay:3s}
+.sienna-card.is-visible .sienna-stat:nth-child(3){animation-delay:6s}
+@keyframes siennaStat{0%{opacity:0;transform:translateY(7px)}4%{opacity:1;transform:translateY(0)}29%{opacity:1;transform:translateY(0)}34%{opacity:0;transform:translateY(-7px)}100%{opacity:0;transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.sienna-card.is-visible .sienna-stat{animation:none}}
 
 /* ── TESTIMONIALS (chicmentor style) ── */
 .test-sec{background:#fff;padding:120px 0}

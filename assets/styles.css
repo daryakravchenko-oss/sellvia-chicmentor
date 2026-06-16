@@ -74,7 +74,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .hp-slider{position:relative;width:100%;aspect-ratio:1319/833;overflow:hidden}
 .hp-slider-row{display:flex;width:300%;height:100%;will-change:transform}
 .hp-slide{flex:0 0 33.3333%;width:33.3333%;height:100%;object-fit:cover;display:block}
-@media(max-width:980px){.hp-grid{grid-template-columns:1fr;gap:36px}.hp-mockup{max-width:560px;margin:0 auto}.hp-mock-vp{height:auto;min-height:0;aspect-ratio:1.6}}
+@media(max-width:980px){.hp-grid{grid-template-columns:1fr;gap:36px}.hp-mockup{max-width:560px;margin:0 auto}.hp-mock-vp{height:auto;min-height:0;aspect-ratio:1.6}.hp-shell{text-align:center}.hp-headline,.hp-sub{margin-left:auto;margin-right:auto}.hp-chips{justify-content:center}.hp-cta-row{justify-content:center}.hp-fine{justify-content:center}}
 @media(max-width:600px){.hp-mock-vp{border-radius:10px}}
 .hp-eyebrow{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.01em;padding:8px 16px;border-radius:100px;margin-bottom:22px;backdrop-filter:blur(10px)}
 .e-100{position:relative;font-weight:700;background:linear-gradient(90deg,#FFD23D,#F5A623,#FFE9A8,#F5A623,#FFD23D);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:goldFlow 3s linear infinite}
@@ -307,7 +307,8 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 }
 @media(max-width:600px){
   .sec-in,.fb-inner,.sienna-inner,.stat-bar-inner,.featured-marquee{padding-left:16px;padding-right:16px}
-  .hp-shell{padding:48px 20px}
+  .hp-shell{padding:48px 0}
+  .hp-grid{padding-left:16px;padding-right:16px}
   .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.final-sec,.ratings-sec{padding:72px 0}
   .stat-bar-inner{grid-template-columns:1fr}
   .stat-item{border-right:none;border-bottom:1px solid rgba(0,0,0,.12);padding:18px 24px}
@@ -315,7 +316,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .get-list{grid-template-columns:1fr}
   .bundle-grid{grid-template-columns:1fr}
   .bcard,.bcard.tall{grid-column:auto;aspect-ratio:16/10}
-  .hp-cta-row{flex-direction:column;align-items:stretch}
+  .hp-cta-row{flex-direction:column;align-items:center}
   .hp-cta-primary,.hp-cta-secondary{justify-content:center}
   .nav-live{display:none}
   .final{padding:48px 22px;border-radius:20px}

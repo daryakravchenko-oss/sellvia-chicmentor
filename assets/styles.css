@@ -251,16 +251,28 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .sienna-stat .m-lbl{font-size:12px;color:rgba(255,255,255,.6);margin-top:6px;line-height:1.3;white-space:nowrap}
 
 /* ── TESTIMONIALS (chicmentor style) ── */
-.test-sec{background:#fff;padding:120px 0}
+.test-sec{background:#FAEFDE;padding:120px 0;overflow:hidden}
 .test-head{text-align:center;max-width:680px;margin:0 auto 52px}
-.tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tcard{background:#fff;border:1px solid var(--c-gray5);border-radius:18px;padding:28px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05)}
-.tcard .stars{color:var(--c-amber);font-size:15px;letter-spacing:2px;margin-bottom:14px}
-.tcard .quote{font-size:16px;color:var(--c-near);font-weight:500;margin-bottom:18px;line-height:1.5}
-.tcard .who{display:flex;align-items:center;gap:11px}
-.tcard .ava{width:40px;height:40px;border-radius:50%;background:var(--c-near);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px}
-.tcard .nm{font-weight:600;font-size:14.5px}
-.tcard .loc{font-size:12.5px;color:var(--c-gray2)}
+.tslider{max-width:1180px;margin:0 auto;position:relative}
+.tslider-viewport{overflow:hidden}
+.tslider-track{display:flex;gap:28px;will-change:transform;transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.tslide{flex:0 0 86%;display:flex;opacity:.4;transition:opacity .55s ease}
+.tslide.is-active{opacity:1}
+.tslide-card{flex:1;display:flex;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.1);min-height:404px}
+.tslide-photo{flex:0 0 42%;position:relative}
+.tslide-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tslide-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:48px clamp(32px,4vw,60px)}
+.tslide-body .tquote{font-size:clamp(19px,1.9vw,26px);line-height:1.42;letter-spacing:-.01em;color:var(--c-near);font-weight:400;margin:0 0 26px}
+.tslide-body .tname{font-style:italic;font-size:15px;color:var(--c-gray2)}
+.tslider-dots{display:flex;justify-content:center;gap:8px;margin-top:34px}
+.tdot{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:rgba(0,0,0,.2);cursor:pointer;transition:width .3s,background .3s}
+.tdot.is-active{width:22px;border-radius:5px;background:var(--c-near)}
+@media(max-width:768px){
+  .tslide-card{flex-direction:column;min-height:0}
+  .tslide-photo{flex:none;width:100%;aspect-ratio:4/3}
+  .tslide-body{padding:26px 24px 30px}
+  .tslide-body .tquote{margin-bottom:20px}
+}
 
 /* ── FAQ (chicmentor style) ── */
 .faq-sec{background:var(--c-lightbg);padding:120px 0}
@@ -346,7 +358,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .get-list{grid-template-columns:repeat(2,1fr)}
   .bundle-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .bcard.tall{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
-  .how-steps,.tcards{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   .sec-in,.fb-inner,.sienna-inner,.stat-bar-inner,.featured-marquee{padding-left:16px;padding-right:16px}

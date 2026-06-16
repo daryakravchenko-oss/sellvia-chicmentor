@@ -183,7 +183,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .get-lead{max-width:680px;margin:18px auto 0;text-align:center;font-size:19px;color:var(--c-gray1);line-height:1.5}
 .get-lead b{color:var(--c-near);font-weight:700}
 .get-list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;position:relative;z-index:2}
-.get-tile{background:#fff;border:1px solid var(--c-gray5);border-radius:18px;padding:32px 26px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.05);transition:transform .3s var(--ease),box-shadow .3s}
+.get-tile{background:rgba(255,255,255,.85);border-radius:18px;padding:32px 26px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.05);transition:transform .3s var(--ease),box-shadow .3s}
 .get-tile:hover{transform:translateY(-4px);box-shadow:0 4px 10px rgba(0,0,0,.06),0 16px 34px rgba(0,0,0,.09)}
 .get-tile .gt-n{font-size:clamp(34px,3.4vw,46px);font-weight:700;letter-spacing:-.03em;color:var(--c-amber);line-height:1;margin-bottom:14px}
 .get-tile h3{font-size:16px;font-weight:600;color:var(--c-near);letter-spacing:-.01em;margin-bottom:10px;line-height:1.3}

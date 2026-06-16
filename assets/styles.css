@@ -144,16 +144,23 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 /* split art (right visual): photo + floating card over the dark half */
 .fb-art-stage{position:absolute;left:0;top:0;bottom:0;width:50%;z-index:2;pointer-events:none;overflow:visible}
 .fb-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-/* freebasic overlay: product card (-20%) + 3 compact stat cards (same cream подложка & fonts), fades in +1s */
-.fb-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:18px;align-items:center;z-index:5;pointer-events:auto;opacity:0;transition:opacity .6s ease;--navy:#2A1F14;--slate-300:#B69F7E;--slate-400:#8D7558;--f-serif:'Cormorant Garamond',Georgia,serif}
-.fb-overlay.is-revealed{opacity:1}
-.fb-pcard{width:384px;flex:0 0 auto}
+/* freebasic overlay: product card + 3 stat cards — choreographed reveal s1..s4 (wrappers animate entrance, inner cards hover) */
+.fb-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:18px;align-items:flex-start;z-index:5;pointer-events:auto;--navy:#2A1F14;--slate-300:#B69F7E;--slate-400:#8D7558;--f-serif:'Cormorant Garamond',Georgia,serif}
+.fb-pcard{width:384px;flex:0 0 auto;opacity:0;transform:translate(108px,26px);transition:opacity .6s ease,transform .85s cubic-bezier(.22,1,.36,1)}
+.fb-overlay.s1 .fb-pcard{opacity:1;transform:translate(108px,0)}
+.fb-overlay.s2 .fb-pcard{opacity:1;transform:translate(0,0)}
+@media(max-width:980px){.fb-pcard{transform:translateY(24px)}.fb-overlay.s1 .fb-pcard,.fb-overlay.s2 .fb-pcard{transform:translateY(0)}}
 .fb-stats{flex:0 0 auto;display:flex;flex-direction:column;gap:14px;width:fit-content}
-.fb-statcard{display:flex;flex-direction:column;justify-content:center;background:#F2EADA;border-radius:16px;box-shadow:0 1px 2px rgba(42,31,20,.06),0 2px 6px rgba(42,31,20,.05),0 0 0 1.5px rgba(142,145,118,.2);padding:10px 16px;overflow:hidden}
+.fb-stat{display:flex;opacity:0;transform:translateX(46px);transition:opacity .55s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.fb-overlay.s2 .fb-stat:nth-child(1){opacity:1;transform:translateX(0)}
+.fb-overlay.s3 .fb-stat:nth-child(2){opacity:1;transform:translateX(0)}
+.fb-overlay.s4 .fb-stat:nth-child(3){opacity:1;transform:translateX(0)}
+.fb-statcard{flex:1;display:flex;flex-direction:column;justify-content:center;background:#F2EADA;border-radius:16px;box-shadow:0 1px 2px rgba(42,31,20,.06),0 2px 6px rgba(42,31,20,.05),0 0 0 1.5px rgba(142,145,118,.2);padding:17.5px 16px;overflow:hidden;transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s cubic-bezier(.22,1,.36,1)}
+.fb-statcard:hover{transform:translateY(-6px);box-shadow:0 6px 12px rgba(42,31,20,.05),0 14px 30px rgba(42,31,20,.09),0 0 0 1.5px rgba(142,145,118,.3)}
 .fb-stat-v{font-family:var(--f-serif);font-size:clamp(19px,1.9vw,25px);font-weight:600;letter-spacing:-.01em;color:var(--navy);line-height:1.02;white-space:nowrap}
 .fb-stat-l{font-size:12px;color:var(--slate-400);margin-top:5px;line-height:1.3;white-space:nowrap}
-.pcard{position:relative;border-radius:24px;display:flex;flex-direction:column;min-width:0;background:rgba(142,145,118,.18);padding:2px;box-shadow:0 1px 2px rgba(42,31,20,.06),0 3px 9px rgba(42,31,20,.05),0 0 0 .5px rgba(248,245,236,.6) inset;transition:transform .6s cubic-bezier(.22,1,.36,1),box-shadow .6s cubic-bezier(.22,1,.36,1)}
-.fb-pcard.pcard:hover{transform:translateY(-6px);box-shadow:0 6px 12px rgba(42,31,20,.05),0 14px 30px rgba(42,31,20,.09),0 0 0 .5px rgba(255,255,255,.6) inset}
+.pcard{position:relative;border-radius:24px;display:flex;flex-direction:column;min-width:0;background:rgba(142,145,118,.18);padding:2px;box-shadow:0 1px 2px rgba(42,31,20,.06),0 3px 9px rgba(42,31,20,.05),0 0 0 .5px rgba(248,245,236,.6) inset;transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s cubic-bezier(.22,1,.36,1)}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 6px 12px rgba(42,31,20,.05),0 16px 34px rgba(42,31,20,.09),0 0 0 .5px rgba(255,255,255,.6) inset}
 .pcard-inner{position:relative;overflow:hidden;border-radius:22px;background:#F2EADA;display:flex;flex-direction:column;height:100%;min-width:0}
 .pcard-inner::before{content:'';position:absolute;top:0;left:5%;right:5%;height:1px;z-index:4;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7) 30%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.7) 70%,transparent)}
 .pcard-top{aspect-ratio:1/1;position:relative;overflow:hidden;margin:7px 7px 0;border-radius:18px;box-shadow:0 1px 4px rgba(0,0,0,.08) inset;background:linear-gradient(135deg,#E5D6B6 0%,#D8C6A8 50%,#BFA98A 100%)}

@@ -227,13 +227,18 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .how-note{text-align:center;margin-top:40px;font-size:14.5px;color:var(--c-gray2);position:relative}
 
 /* ── SIENNA (igtt bonus) ── */
-.sienna-sec{background:var(--c-lightbg);padding:120px 0;position:relative;overflow:hidden}
+.sienna-sec{background:#0e0c10;color:#fff;padding:120px 0;position:relative;overflow:hidden}
 .sienna-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1140px;margin:0 auto;padding:0 28px}
 .sienna-left{display:flex;flex-direction:column}
-.sienna-left .bonus-pill{background:var(--c-near)}
+.sienna-left .bonus-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.sienna-left .bonus-heading{color:#fff}
+.sienna-left .bonus-sub{color:rgba(255,255,255,.62)}
 .sienna-left .bullets{border-top:none;margin-bottom:30px}
-.sienna-left .bullet-item:first-child{border-top:1px solid var(--c-gray4)}
-.sienna-card{background:linear-gradient(155deg,#1d1d1f,#15131a);border-radius:24px;padding:34px;color:#fff;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.2)}
+.sienna-left .bullet-item{border-bottom-color:rgba(255,255,255,.12)}
+.sienna-left .bullet-item:first-child{border-top:1px solid rgba(255,255,255,.12)}
+.sienna-left .bullet-text{color:rgba(255,255,255,.85)}
+.sienna-left .bullet-item svg{color:var(--c-amber)}
+.sienna-card{background:linear-gradient(155deg,#1d1d1f,#15131a);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:34px;color:#fff;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.2)}
 .sienna-card::before{content:'';position:absolute;top:-60px;right:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(245,166,35,.35),transparent 65%)}
 .sienna-tag{position:relative;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:100px;margin-bottom:20px}
 .sienna-tag .dot{width:7px;height:7px;border-radius:50%;background:#ff5a5a}

@@ -88,7 +88,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .hp-chip{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:#fff;white-space:nowrap}
 .hp-chip svg{width:13px;height:13px;color:var(--c-amber)}
 .hp-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.hp-cta-primary{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:9px;background:#fff;color:#0a0a0a;font-weight:600;font-size:17px;letter-spacing:-.01em;padding:0 30px;height:54px;border-radius:999px;transition:transform .15s}
+.hp-cta-primary{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:9px;background:#fff;color:#0a0a0a;font-weight:600;font-size:17px;letter-spacing:-.01em;padding:17px 30px;border-radius:999px;transition:transform .15s}
 .hp-cta-primary:hover{transform:scale(1.02)}
 .hp-cta-primary svg{width:17px;height:17px;transition:transform .18s}
 .hp-cta-primary:hover svg{transform:translateX(3px)}
@@ -96,7 +96,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .hp-cta-primary::before{inset:-4px;filter:blur(9px);opacity:.85;z-index:-1}
 .hp-cta-primary::after{inset:0;padding:2px;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:1}
 .hp-cta-primary:hover::before,.hp-cta-primary:hover::after{opacity:0}
-.hp-cta-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);font-weight:600;font-size:17px;letter-spacing:-.01em;padding:0 28px;height:54px;border-radius:999px;transition:background .2s,border-color .2s,box-shadow .2s;backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.18)}
+.hp-cta-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);font-weight:600;font-size:17px;letter-spacing:-.01em;padding:16px 28px;border-radius:999px;transition:background .2s,border-color .2s,box-shadow .2s;backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.18)}
 .hp-cta-secondary:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 30px rgba(0,0,0,.22)}
 .hp-fine{font-size:14px;color:var(--hp-muted);margin:18px 0 0;display:flex;align-items:center;gap:8px}
 .hp-fine svg{width:14px;height:14px;color:var(--c-green)}
@@ -112,7 +112,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .stat-l{font-size:14px;color:rgba(0,0,0,.45);margin-top:8px;display:block;text-wrap:balance}
 
 /* ── TRUST / RATINGS (dark marquee) ── */
-.ratings-sec{background:#fff;padding:30px 0}
+.ratings-sec{background:#fff;padding:60px 0}
 .featured-marquee{display:flex;align-items:center;gap:36px;max-width:var(--max-wide);margin:0 auto;padding:0 28px}
 .featured-label{flex-shrink:0;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(0,0,0,.45);white-space:nowrap}
 .featured-viewport{flex:1;min-width:0;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
@@ -398,10 +398,11 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .bcard,.bcard.tall{grid-column:auto;aspect-ratio:1/1}
   .bcard,.tslide-card,.sienna-card{border-radius:10px}
   .hp-cta-row{flex-direction:column;align-items:center}
-  .hp-cta-primary,.hp-cta-secondary,.bento-foot .btn,.fb-inner .bonus-left .btn-dark,.final-btns .btn{display:flex;width:100%;max-width:358px;margin-left:auto;margin-right:auto;justify-content:center}
+  .hp-cta-primary,.hp-cta-secondary,.bento-foot .btn,.fb-inner .bonus-left .btn-dark,.final-btns .btn{display:flex;width:100%;max-width:358px;height:54px;margin-left:auto;margin-right:auto;justify-content:center}
   .fb-inner .bonus-left>.appear:has(.btn-dark){align-self:stretch}
   .nav-live{display:none}
   .footer-badges{gap:9px}
+  .ratings-sec{padding:30px 0}
 }
 @media(max-width:480px){
   .fb-art-stage{max-width:none;width:100vw;margin:36px calc(50% - 50vw) 0;border-radius:0}

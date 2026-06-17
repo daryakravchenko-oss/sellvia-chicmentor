@@ -264,12 +264,12 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .tslider-viewport{overflow:hidden;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
 .tslider-viewport.is-drag{cursor:grabbing}
 .tslider-track{display:flex;gap:24px;will-change:transform}
-.tslide{flex:0 0 82%;display:flex;opacity:.4;transition:opacity .55s ease}
+.tslide{flex:0 0 auto;display:flex;opacity:.4;transition:opacity .55s ease}
 .tslide.is-active{opacity:1}
-.tslide-card{flex:1;display:flex;background:#fff;border-radius:24px;overflow:hidden;min-height:350px}
-.tslide-photo{flex:0 0 50%;position:relative}
+.tslide-card{flex:0 0 auto;display:flex;background:#fff;border-radius:24px;overflow:hidden;height:350px}
+.tslide-photo{flex:0 0 350px;position:relative}
 .tslide-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
-.tslide-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:36px clamp(28px,3.2vw,44px)}
+.tslide-body{flex:0 0 460px;display:flex;flex-direction:column;justify-content:center;padding:36px clamp(28px,3.2vw,44px)}
 .tslide-body .tstars{color:var(--c-amber);font-size:15px;letter-spacing:2px;margin-bottom:14px}
 .tslide-body .tquote{font-size:16px;line-height:1.55;color:var(--c-near);font-weight:500;margin:0 0 16px}
 .tslide-body .tname{font-size:14.5px;font-weight:600;color:var(--c-near)}
@@ -277,11 +277,11 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .tslider-dots{display:flex;justify-content:center;gap:8px;margin-top:34px}
 .tdot{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:rgba(0,0,0,.2);cursor:pointer;transition:width .3s,background .3s}
 .tdot.is-active{width:22px;border-radius:5px;background:var(--c-near)}
-@media(max-width:768px){
+@media(max-width:900px){
   .tslide{flex-basis:86%}
-  .tslide-card{flex-direction:column;min-height:0}
-  .tslide-photo{flex:none;width:100%;aspect-ratio:4/3}
-  .tslide-body{padding:24px 22px 28px}
+  .tslide-card{flex-direction:column;height:auto}
+  .tslide-photo{flex:none;width:100%;aspect-ratio:1}
+  .tslide-body{flex:initial;width:auto;padding:24px 22px 28px}
 }
 
 /* ── FAQ (chicmentor style) ── */
@@ -340,7 +340,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 /* ── FOOTER ── */
 .footer{background:#0e0c10;border-top:1px solid rgba(255,255,255,.1)}
 .footer-in{max-width:var(--max-wide);margin:0 auto;padding:48px 28px 54px}
-.footer-top{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-bottom:24px}
+.footer-top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 24px;margin-bottom:24px}
 .footer-badges{display:flex;flex-wrap:wrap;gap:18px}
 .footer-badge{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.72)}
 .footer-fine{font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.5);max-width:760px;border-top:1px solid rgba(255,255,255,.1);padding-top:22px}

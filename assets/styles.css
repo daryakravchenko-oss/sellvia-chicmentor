@@ -359,16 +359,18 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 
 /* ── RESPONSIVE ── */
 @media(max-width:980px){
+  .hp-headline,.hp-sub{margin-left:auto;margin-right:auto}
   .fb-inner,.sienna-inner{grid-template-columns:1fr;gap:40px}
   .freebasic-section::before{display:none}
+  .freebasic-section{padding-bottom:0}
   .fb-inner .bonus-left{grid-column:auto;padding-left:0;text-align:center;align-items:center}
   .sienna-left{text-align:center;align-items:center}
   .sienna-left .bonus-heading,.sienna-left .bonus-sub{max-width:none}
   .freebasic-section .bullet-item,.sienna-left .bullet-item{justify-content:flex-start}
-  .freebasic-section .bullets,.sienna-left .bullets{align-self:stretch}
+  .freebasic-section .bullets,.sienna-left .bullets{align-self:center;width:100%;max-width:500px}
   .freebasic-section .bullet-text,.sienna-left .bullet-text{text-align:left}
-  .fb-art-stage{position:relative;width:100%;max-width:420px;margin:44px auto 0;aspect-ratio:4/5}
-  .fb-video{border-radius:18px}
+  .fb-art-stage{position:relative;width:100vw;max-width:none;margin:40px calc(50% - 50vw) 0;aspect-ratio:4/5}
+  .fb-video{border-radius:0}
   .fb-stats{display:none}
   .fb-overlay{transform:translate(-50%,-50%) scale(.72)}
   .get-list{grid-template-columns:repeat(2,1fr)}

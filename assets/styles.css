@@ -367,7 +367,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .freebasic-section .bullet-item,.sienna-left .bullet-item{justify-content:flex-start}
   .freebasic-section .bullets,.sienna-left .bullets{align-self:stretch}
   .freebasic-section .bullet-text,.sienna-left .bullet-text{text-align:left}
-  .fb-art-stage{position:relative;width:100%;max-width:420px;margin:44px auto 0;aspect-ratio:1/1}
+  .fb-art-stage{position:relative;width:100%;max-width:420px;margin:44px auto 0;aspect-ratio:4/5}
   .fb-video{border-radius:18px}
   .fb-stats{display:none}
   .fb-overlay{transform:translate(-50%,-50%) scale(.72)}
@@ -388,7 +388,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .hp-grid{padding-left:16px;padding-right:16px}
   .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec{padding:72px 0}
   .freebasic-section{padding-bottom:0}
-  .fb-art-stage{max-width:none;width:100vw;margin:40px calc(50% - 50vw) 0;aspect-ratio:1/1}
+  .fb-art-stage{max-width:none;width:100vw;margin:40px calc(50% - 50vw) 0;aspect-ratio:4/5}
   .fb-video{border-radius:0}
   .stat-bar-inner{grid-template-columns:1fr}
   .stat-item{border-right:none;border-bottom:1px solid rgba(0,0,0,.12);padding:18px 24px}

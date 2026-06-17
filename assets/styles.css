@@ -378,6 +378,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 }
 @media(max-width:600px){
   .sec-in,.fb-inner,.sienna-inner,.stat-bar-inner,.featured-marquee{padding-left:16px;padding-right:16px}
+  .nav-in{padding-left:16px;padding-right:16px;gap:8px}
   .featured-marquee{flex-direction:column;gap:24px}
   .featured-label{text-align:center}
   .sienna-stats{align-self:stretch}

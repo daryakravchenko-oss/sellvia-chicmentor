@@ -257,7 +257,7 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
 .sienna-stat:first-child{padding-left:0}
 .sienna-stat+.sienna-stat{border-left:1px solid rgba(255,255,255,.18)}
 .sienna-stat .m-val{font-weight:700;font-size:23px;color:var(--c-amber);line-height:1;letter-spacing:-.01em}
-.sienna-stat .m-lbl{font-size:13px;color:rgba(255,255,255,.6);margin-top:6px;line-height:1.3;max-width:96px}
+.sienna-stat .m-lbl{font-size:13px;color:rgba(255,255,255,.6);margin-top:6px;line-height:1.3;white-space:nowrap}
 
 /* ── TESTIMONIALS (chicmentor style) ── */
 .test-sec{background:#FAEFDE;padding:120px 0;overflow:hidden}
@@ -380,10 +380,10 @@ h1,h2,h3{letter-spacing:-.02em;text-wrap:balance}
   .sec-in,.fb-inner,.sienna-inner,.stat-bar-inner,.featured-marquee{padding-left:16px;padding-right:16px}
   .featured-marquee{flex-direction:column;gap:14px}
   .featured-label{text-align:center}
-  .sienna-stats{justify-content:center}
-  .sienna-stat{padding:0 11px}
-  .sienna-stat:first-child{padding-left:11px}
-  .sienna-stat .m-lbl{max-width:82px}
+  .sienna-stats{align-self:stretch}
+  .sienna-stat{flex:1;padding:0 6px}
+  .sienna-stat:first-child{padding-left:6px}
+  .sienna-stat .m-lbl{white-space:normal}
   .hp-shell{padding:48px 0}
   .hp-grid{padding-left:16px;padding-right:16px}
   .freebasic-section,.get-sec,.bento-sec,.how-sec,.sienna-sec,.test-sec,.faq-sec,.ratings-sec{padding:72px 0}
